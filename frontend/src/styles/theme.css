@@ -1,0 +1,157 @@
+/* Alexandria AI Library - Cozy Wood-Tone Theme System */
+
+:root {
+  --bg-parchment: #fcf9f2;
+  --bg-card: #f6efe2;
+  --bg-card-hover: #f1e6d4;
+  --bg-modal: #faf4e8;
+  
+  --text-primary: #2c1a14;
+  --text-secondary: #6c544a;
+  --text-muted: #9e877c;
+  
+  --color-leather: #7a3e1d;
+  --color-leather-hover: #613014;
+  --color-burgundy: #691a18;
+  --color-gold: #c69214;
+  --color-gold-soft: #f7eed7;
+  
+  --border-cozy: #e4d5c1;
+  --border-gold: #d8b871;
+  
+  --font-heading: 'Playfair Display', 'Lora', Georgia, serif;
+  --font-serif: 'Lora', Georgia, serif;
+  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+
+  --shadow-book: 3px 6px 16px rgba(44, 26, 20, 0.1), 0 2px 4px rgba(44, 26, 20, 0.05);
+  --shadow-hover: 6px 12px 28px rgba(44, 26, 20, 0.18), 0 4px 8px rgba(44, 26, 20, 0.08);
+  --shadow-inner: inset 0 2px 4px rgba(44, 26, 20, 0.06);
+
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 16px;
+  --radius-full: 9999px;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--bg-parchment);
+  color: var(--text-primary);
+  font-family: var(--font-sans);
+  line-height: 1.6;
+  background-image: radial-gradient(#e6d8c5 0.75px, transparent 0.75px);
+  background-size: 24px 24px;
+  min-height: 100vh;
+}
+
+h1, h2, h3, h4, h5 {
+  font-family: var(--font-heading);
+  color: var(--text-primary);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+/* Custom Scrollbar for Library aesthetic */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--bg-parchment);
+}
+::-webkit-scrollbar-thumb {
+  background: #d6c3ad;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-leather);
+}
+
+/* Common UI Utilities */
+.badge-gold {
+  background-color: var(--color-gold-soft);
+  color: #724e03;
+  border: 1px solid var(--border-gold);
+  padding: 3px 8px;
+  border-radius: var(--radius-full);
+  font-size: 0.75rem;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.badge-tag {
+  background-color: #ebdcc9;
+  color: var(--text-secondary);
+  border: 1px solid #d9c7b1;
+  padding: 2px 8px;
+  border-radius: var(--radius-sm);
+  font-size: 0.72rem;
+  font-weight: 500;
+  text-transform: lowercase;
+}
+
+.btn-primary {
+  background-color: var(--color-leather);
+  color: #ffffff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: var(--radius-md);
+  font-family: var(--font-sans);
+  font-weight: 600;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  box-shadow: 0 2px 6px rgba(122, 62, 29, 0.25);
+}
+
+.btn-primary:hover {
+  background-color: var(--color-leather-hover);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 10px rgba(122, 62, 29, 0.35);
+}
+
+.btn-secondary {
+  background-color: var(--bg-card);
+  color: var(--text-primary);
+  border: 1px solid var(--border-cozy);
+  padding: 10px 18px;
+  border-radius: var(--radius-md);
+  font-weight: 600;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.btn-secondary:hover {
+  background-color: var(--bg-card-hover);
+  border-color: #cbbaa5;
+}
+
+/* Modal Overlay backdrop */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(30, 18, 14, 0.65);
+  backdrop-filter: blur(4px);
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
